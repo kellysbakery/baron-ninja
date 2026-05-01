@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title or "Best Day Ever Comics" }} | baron.ninja</title>
+  <link rel="stylesheet" href="/css/site.css">
+</head>
+<body>
+  <header class="site-header">
+  <div class="site-title">
+    <a href="/">baron.ninja</a>
+    <span>Best Day Ever Comics</span>
+  </div>
+
+  <nav class="site-nav">
+    <a href="/comics/">Archive</a>
+  </nav>
+</header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+  <footer class="site-footer">
+    <p>© 2026 Keith Baron. Best Day Ever Comics. All rights reserved.</p>
+    <p class="site-license">
+      Please share links, but do not copy, repost, modify, or reuse comics without permission.
+    </p>
+  </footer>
+</body>
+</html>

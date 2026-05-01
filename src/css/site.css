@@ -1,0 +1,462 @@
+/* =========================================================
+   THEME VARIABLES
+   ========================================================= */
+
+:root {
+  --bg: #11100e;
+  --panel: #1b1814;
+  --panel-border: #4a3822;
+  --text: #fff3df;
+  --muted: #c8ad83;
+  --accent: #d9a441;
+  --button: #f0c15a;
+  --button-text: #1b1814;
+  --shadow: rgba(0, 0, 0, 0.35);
+}
+
+/* =========================================================
+   GLOBAL BASE STYLES
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.45rem 1rem;
+  background: var(--panel);
+  border-bottom: 2px solid var(--panel-border);
+}
+
+.site-title a {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.site-title span {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.site-nav a {
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   MAIN LAYOUT
+   ========================================================= */
+
+main {
+  margin: 0.75rem auto;
+}
+
+h2 {
+  margin: 0.25rem 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* =========================================================
+   COMIC FEATURE / CARDS
+   ========================================================= */
+
+.comic-feature,
+.comic-card {
+  background: var(--panel);
+  border: 2px solid var(--panel-border);
+  border-radius: 18px;
+  padding: 0.75rem;
+  box-shadow: 0 6px 18px var(--shadow);
+  text-align: center;
+}
+
+.comic-feature h3 {
+  margin: 0.25rem 0;
+}
+
+.comic-date {
+  margin: 0 0 0.5rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.comic-feature img,
+.comic-viewer img {
+  width: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 190px);
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+/* =========================================================
+   SINGLE COMIC VIEWER
+   Left button | Image | Right button
+   ========================================================= */
+
+.comic-viewer {
+  display: grid;
+  grid-template-columns: 120px minmax(0, auto) 120px;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* =========================================================
+   OLDER / NEWER BUTTONS
+   ========================================================= */
+
+.comic-side-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.comic-side-nav a,
+.comic-nav a {
+  display: inline-block;
+  background: var(--button);
+  color: var(--button-text);
+  text-decoration: none;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  white-space: nowrap;
+  position: relative;
+  z-index: 2;
+}
+
+.comic-side-nav a:hover,
+.comic-nav a:hover {
+  opacity: 0.85;
+}
+
+/* =========================================================
+   HOMEPAGE LAYOUT
+   ========================================================= */
+
+.home-main {
+  min-height: calc(100vh - 110px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-main h2 {
+  margin: 0 0 0.75rem;
+}
+
+.home-comic-nav {
+  justify-content: flex-end;
+}
+
+/* =========================================================
+   COMIC TITLE + INLINE DATE
+   ========================================================= */
+
+.comic-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 0.25rem 0 0.5rem;
+  flex-wrap: wrap;
+}
+
+.comic-title .comic-date {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* =========================================================
+   YEAR ARCHIVE PAGE HEADER
+   Used on /comics/YYYY/
+   ========================================================= */
+
+.year-page-header {
+  max-width: 700px;
+  margin: 0.75rem auto 1.5rem;
+  padding: 0 1rem;
+}
+
+.year-title-main {
+  text-align: center;
+}
+
+.year-title-main h2 {
+  margin: 0;
+}
+
+.year-page-header .archive-summary {
+  margin: 0.15rem 0 0.75rem;
+}
+
+/* Year-to-year navigation row under the year title */
+.year-title-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.year-title-row a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.year-title-row a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.year-title-side-left {
+  text-align: right;
+}
+
+.year-title-side-right {
+  text-align: left;
+}
+
+.year-title-center {
+  font-weight: 700;
+  opacity: 1;
+}
+
+/* =========================================================
+   MONTH HEADINGS
+   Used on /comics/YYYY/
+   ========================================================= */
+
+.month-heading {
+  max-width: 1100px;
+  margin: 1.5rem auto 0.75rem;
+  padding: 0 1rem 0.4rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--accent);
+  border-bottom: 1px solid var(--panel-border);
+  opacity: 0.9;
+}
+
+/* =========================================================
+   ARCHIVE GRID
+   Used below each month on /comics/YYYY/
+   ========================================================= */
+
+.archive-grid {
+  max-width: 1200px;
+  margin: 0 auto 1rem;
+  padding: 0 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 240px);
+  gap: 1rem;
+
+  /* Left-align sparse months so one-card months do not float oddly */
+  justify-content: start;
+}
+
+.archive-grid .comic-card {
+  width: 240px;
+}
+
+.comic-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* =========================================================
+   ARCHIVE YEAR LIST PAGE
+   Used on /comics/
+   ========================================================= */
+
+.archive-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.archive-subtitle {
+  text-align: center;
+  color: var(--muted);
+  margin-top: -0.75rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.year-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.year-item {
+  margin-bottom: 0.75rem;
+}
+
+.year-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  padding: 0.6rem 0.9rem;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+
+.year-link:hover {
+  background: #2a241b;
+  border-color: var(--accent);
+}
+
+.year-item:first-child .year-link {
+  border-color: var(--accent);
+  background: rgba(255, 200, 100, 0.05);
+}
+
+/* =========================================================
+   ARCHIVE YEAR CARDS
+   Older alternate year-card layout.
+   Safe to keep for now, but unused if /comics/ uses .year-list.
+   ========================================================= */
+
+.year-card-grid {
+  max-width: 900px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.year-card {
+  background: var(--panel);
+  border: 2px solid var(--panel-border);
+  border-radius: 16px;
+  box-shadow: 0 6px 18px var(--shadow);
+}
+
+.year-card-link {
+  display: block;
+  padding: 1.25rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.year-card-year {
+  display: block;
+  color: var(--text);
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.year-card-count {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.year-card-latest {
+  display: block;
+  margin-top: 0.35rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.year-card:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   LEGACY SIMPLE NAV
+   Kept for fallback layouts or future simple nav rows.
+   ========================================================= */
+
+.comic-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.75rem;
+  font-weight: 700;
+}
+
+.comic-nav-top {
+  margin: 0.5rem 0 1rem;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+  width: 100%;
+  margin-top: 2rem;
+  background: var(--panel);
+  border-top: 1px solid var(--panel-border);
+  padding: 0.6rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.site-footer p {
+  margin: 0.1rem 0;
+}
+
+.site-license {
+  font-size: 0.78rem;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .comic-viewer {
+    grid-template-columns: 1fr;
+  }
+
+  .comic-side-nav {
+    order: 2;
+  }
+}

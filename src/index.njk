@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+title: Home
+---
+
+<div class="home-main">
+
+  {% set latestComic = comics | last %}
+  {% set previousComic = comics[comics.length - 2] %}
+
+  {% if latestComic %}
+    <article class="comic-feature comic-page">
+      <h2 class="comic-title">
+        {{ latestComic.title }}
+        <span class="comic-date">{{ latestComic.date | formatDate }}</span>
+      </h2>
+
+      <div class="comic-viewer">
+        <div class="comic-side-nav">
+          <span></span>
+        </div>
+
+        <a href="{{ latestComic.url }}">
+          <img src="{{ latestComic.image }}" alt="{{ latestComic.alt }}">
+        </a>
+
+        <div class="comic-side-nav">
+          {% if previousComic %}
+            <a href="{{ previousComic.url }}">Older →</a>
+          {% endif %}
+        </div>
+      </div>
+    </article>
+  {% else %}
+    <p>No comics published yet.</p>
+  {% endif %}
+</div>

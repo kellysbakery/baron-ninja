@@ -1,0 +1,82 @@
+---
+layout: layouts/base.njk
+
+# Create one page for each year from src/_data/comicsByYear.js
+pagination:
+  data: comicsByYear
+  size: 1
+  alias: yearGroup
+
+# Example output: /comics/2026/
+permalink: "/comics/{{ yearGroup.year }}/"
+---
+
+{#
+  Year archive page.
+
+  yearGroup comes from src/_data/comicsByYear.js and contains:
+  - yearGroup.year
+  - yearGroup.comics
+  - yearGroup.previousYear
+  - yearGroup.nextYear
+
+  comicsByYearMonth comes from src/_data/comicsByYearMonth.js
+  and groups comics by year, then month.
+#}
+
+<div class="year-page-header">
+  <div class="year-title-main">
+    <h2>{{ yearGroup.year }} Comics</h2>
+    <p class="archive-summary">{{ yearGroup.comics.length }} comics</p>
+  </div>
+
+<nav class="year-title-row">
+  <span class="year-title-side year-title-side-left">
+    {% if yearGroup.previousYear %}
+      <a href="/comics/{{ yearGroup.previousYear }}/">← {{ yearGroup.previousYear }}</a>
+    {% endif %}
+  </span>
+
+  <a href="/comics/" class="year-title-center">All Years</a>
+
+  <span class="year-title-side year-title-side-right">
+    {% if yearGroup.nextYear %}
+      <a href="/comics/{{ yearGroup.nextYear }}/">{{ yearGroup.nextYear }} →</a>
+    {% endif %}
+  </span>
+</nav>
+</div>
+</div>
+
+{# Find the matching year in the year/month grouped data. #}
+{% for year in comicsByYearMonth %}
+  {% if year.year == yearGroup.year %}
+
+    {# Render each month section, newest month first. #}
+    {% for monthGroup in year.months %}
+      <h3 class="month-heading">
+        {{ monthGroup.monthName }}
+      </h3>
+
+      <div class="archive-grid">
+        {# Render comics within this month, newest first. #}
+        {% for comic in monthGroup.comics %}
+          <article class="comic-card">
+            <h3>
+              <a href="{{ comic.url }}">
+                {{ comic.title }}
+              </a>
+            </h3>
+
+            <p class="comic-date">{{ comic.date | formatDate }}</p>
+
+            <a href="{{ comic.url }}">
+              <img src="{{ comic.image }}" alt="{{ comic.alt }}">
+            </a>
+          </article>
+        {% endfor %}
+      </div>
+    {% endfor %}
+
+  {% endif %}
+{% endfor %}

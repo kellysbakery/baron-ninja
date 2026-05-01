@@ -1,0 +1,35 @@
+---
+pagination:
+  data: comics
+  size: 1
+  alias: comic
+permalink: "{{ comic.url }}"
+layout: layouts/base.njk
+---
+
+{% set currentIndex = pagination.pageNumber %}
+{% set previousComic = comics[currentIndex - 1] %}
+{% set nextComic = comics[currentIndex + 1] %}
+
+<article class="comic-feature comic-page">
+<h2 class="comic-title">
+  {{ comic.title }}
+  <span class="comic-date">{{ comic.date | formatDate }}</span>
+</h2>
+
+  <div class="comic-viewer">
+    <div class="comic-side-nav">
+      {% if nextComic %}
+        <a href="{{ nextComic.url }}">← Newer</a>
+      {% endif %}
+    </div>
+
+    <img src="{{ comic.image }}" alt="{{ comic.alt }}">
+
+    <div class="comic-side-nav">
+      {% if previousComic %}
+        <a href="{{ previousComic.url }}">Older →</a>
+      {% endif %}
+    </div>
+  </div>
+</article>
