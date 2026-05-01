@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000">
-  <rect width="1400" height="1000" fill="#f8e6c4"/>
-  <rect x="30" y="30" width="1340" height="940" rx="24" fill="#fff6df" stroke="#2f2418" stroke-width="12"/>
-  <text x="700" y="420" text-anchor="middle" font-family="Arial, sans-serif" font-size="72" font-weight="700" fill="#2f2418">Fake Comic 22</text>
-  <text x="700" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#7a6550">2026-10-07</text>
-  <text x="700" y="620" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#7a6550">Placeholder comic image</text>
-</svg>
