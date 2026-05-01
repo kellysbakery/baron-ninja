@@ -1,0 +1,11 @@
+{
+  "id": "2024-03-15-fake-2024-03",
+  "slug": "fake-2024-03",
+  "title": "Fake Comic 2024-03",
+  "date": "2024-03-15",
+  "image": "/images/comics/2024/2024-03-15-fake-2024-03.svg",
+  "alt": "Placeholder image for Fake Comic 2024-03.",
+  "characters": ["Hazel", "Remy", "Grandma"],
+  "tags": ["placeholder", "archive-test", "2024"],
+  "status": "published"
+}

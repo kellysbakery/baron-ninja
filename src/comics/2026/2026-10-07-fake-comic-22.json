@@ -1,0 +1,11 @@
+{
+  "id": "2026-10-07-fake-comic-22",
+  "slug": "fake-comic-22",
+  "title": "Fake Comic 22",
+  "date": "2026-10-07",
+  "image": "/images/comics/2026/2026-10-07-fake-comic-22.svg",
+  "alt": "Placeholder image for Fake Comic 22.",
+  "characters": ["Hazel", "Remy", "Grandma"],
+  "tags": ["placeholder", "test", "archive"],
+  "status": "published"
+}

@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+title: Archive
+permalink: /comics/
+---
+
+<h2 class="archive-title">All Comics</h2>
+<p class="archive-subtitle">Browse comics by year</p>
+<ul class="year-list">
+  {% for year in comicsByYear %}
+    <li class="year-item">
+      <a href="/comics/{{ year.year }}/" class="year-link">
+        {{ year.year }}
+        <span class="year-count">({{ year.comics.length }})</span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>
