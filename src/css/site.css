@@ -159,23 +159,91 @@ h2 {
   opacity: 0.85;
 }
 
-/* =========================================================
-   HOMEPAGE LAYOUT
-   ========================================================= */
+/* =========================
+   HOME LAYOUT (NO SCROLL)
+   ========================= */
 
 .home-main {
-  min-height: calc(100vh - 110px);
+  height: calc(100vh - 110px);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+/* Title */
+.home-main h2 {
+  margin: 0 0 0.25rem;
+}
+
+/* Tagline */
+.home-intro {
+  max-width: 900px;
+  margin: 0 auto 0.4rem;
+  padding: 0 1rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+/* Comic container */
+.home-comic {
+  flex: 1;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 
-.home-main h2 {
-  margin: 0 0 0.75rem;
+/* Comic image scaling */
+.home-comic img {
+  max-height: 60vh;
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+  border-radius: 0.5rem;
 }
 
-.home-comic-nav {
-  justify-content: flex-end;
+/* Footer tightening */
+footer {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+}
+
+/* =========================================================
+   HOMEPAGE INTRO
+   Short description shown above the latest comic
+   ========================================================= */
+
+.home-intro {
+  max-width: 900px;
+  margin: 0 auto 0.35rem;
+  padding: 0 1rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.home-intro p {
+  margin: 0;
+}
+
+.home-intro p:last-child {
+  opacity: 0.8;
+  font-size: 0.95rem;
+}
+
+/* Give the featured comic a little more visual importance */
+.comic-feature {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Subtle premium frame for main comic images */
+.comic-feature img,
+.comic-viewer img {
+  border: 2px solid rgba(255, 243, 223, 0.75);
 }
 
 /* =========================================================
@@ -429,22 +497,38 @@ h2 {
    ========================================================= */
 
 .site-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+
   width: 100%;
-  margin-top: 2rem;
+  height: 1.25rem;
+  margin: 0;
+  padding: 0.18rem 0.5rem;
+
   background: var(--panel);
   border-top: 1px solid var(--panel-border);
-  padding: 0.6rem;
+
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   color: var(--muted);
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .site-footer p {
-  margin: 0.1rem 0;
+  margin: 0;
+  display: inline;
 }
 
 .site-license {
-  font-size: 0.78rem;
+  display: inline;
+  margin-left: 0.5rem;
+  font-size: inherit;
 }
 
 /* =========================================================
