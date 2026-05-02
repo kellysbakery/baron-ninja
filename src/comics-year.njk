@@ -1,14 +1,15 @@
 ---
 layout: layouts/base.njk
 
-# Create one page for each year from src/_data/comicsByYear.js
 pagination:
   data: comicsByYear
   size: 1
   alias: yearGroup
 
-# Example output: /comics/2026/
 permalink: "/comics/{{ yearGroup.year }}/"
+
+eleventyComputed:
+  title: "{{ yearGroup.year }} Comics"
 ---
 
 {#
