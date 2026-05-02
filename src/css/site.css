@@ -160,15 +160,14 @@ h2 {
 }
 
 /* =========================
-   HOME LAYOUT (NO SCROLL)
+   HOME LAYOUT
+   Homepage uses the same visual sizing rules as comic pages.
    ========================= */
 
 .home-main {
-  height: calc(100vh - 110px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0.5rem 0;
+  display: block;
+  height: auto;
+  padding: 0;
 }
 
 /* Title */
@@ -179,7 +178,7 @@ h2 {
 /* Tagline */
 .home-intro {
   max-width: 900px;
-  margin: 0 auto 0.4rem;
+  margin: 0 auto 0.5rem;
   padding: 0 1rem;
   text-align: center;
   color: var(--muted);
@@ -189,19 +188,26 @@ h2 {
 
 /* Comic container */
 .home-comic {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+}
+
+.home-comic a {
+  display: inline-block;
+  max-width: 100%;
 }
 
 /* Comic image scaling */
 .home-comic img {
-  max-height: 60vh;
-  max-width: 100%;
+  display: block;
   width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: calc(100vh - 190px);
   object-fit: contain;
-  border-radius: 0.5rem;
+  border-radius: 12px;
 }
 
 /* Footer tightening */
@@ -498,8 +504,8 @@ footer {
 
 .site-footer {
   width: 100%;
-  margin: 0.35rem 0 0;
-  padding: 0.35rem 0.75rem;
+  margin: 0.15rem 0 0;
+  padding: 0.1rem 0.5rem;
 
   background: var(--panel);
   border-top: 1px solid var(--panel-border);
@@ -507,7 +513,11 @@ footer {
   text-align: center;
   font-size: 0.72rem;
   color: var(--muted);
-  line-height: 1.25;
+  line-height: 1;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .site-footer p {
@@ -520,6 +530,7 @@ footer {
   margin-left: 0.5rem;
   font-size: inherit;
 }
+
 /* =========================================================
    RESPONSIVE
    ========================================================= */
@@ -531,6 +542,14 @@ footer {
 
   .comic-side-nav {
     order: 2;
+  }
+
+  .site-footer {
+    padding: 0.35rem 0.75rem;
+    line-height: 1.25;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
   }
 
   .site-footer p,
@@ -546,7 +565,7 @@ footer {
   .site-header {
     align-items: center;
     gap: 0.75rem;
-    padding: 0.5rem 0.75rem;
+    padding: 0.4rem 0.6rem;
   }
 
   .site-title a {
@@ -566,25 +585,9 @@ footer {
     margin: 0.5rem auto;
   }
 
-  .comic-feature {
-    padding: 0.5rem 0;
-  }
-
-  .comic-feature img,
-  .comic-viewer img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: none;
-    margin: 0 auto;
-  }
-  .comic-feature {
-    max-width: none;
-    margin-left: 0;
-    margin-right: 0;
-  }
   h2 {
     margin: 0.15rem 0 0.25rem;
+    font-size: 1.6rem;
   }
 
   .comic-title {
@@ -592,34 +595,35 @@ footer {
   }
 
   .comic-feature {
-    padding-top: 0.35rem;
-    padding-bottom: 0.5rem;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.35rem 0 0.5rem;
   }
 
-  .comic-title h2,
-  h2 {
-    font-size: 1.6rem;
+  .comic-feature img,
+  .comic-viewer img,
+  .home-comic img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    margin: 0 auto;
   }
-  .site-header {
-    padding: 0.4rem 0.6rem;
+
+  .home-comic a {
+    display: block;
+    width: 100%;
   }
 }
 
 @media (max-width: 1000px) and (orientation: landscape) {
-  .home-main {
-    height: auto;
-  }
-
-  .comic-feature {
-    max-width: none;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
   .home-comic {
+    display: block;
+    width: 100%;
+  }
+
+  .home-comic a {
     display: block;
     width: 100%;
   }
