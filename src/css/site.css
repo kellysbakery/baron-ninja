@@ -583,6 +583,26 @@ footer {
     margin-left: 0;
     margin-right: 0;
   }
+  h2 {
+    margin: 0.15rem 0 0.25rem;
+  }
+
+  .comic-title {
+    margin: 0.15rem 0 0.35rem;
+  }
+
+  .comic-feature {
+    padding-top: 0.35rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .comic-title h2,
+  h2 {
+    font-size: 1.6rem;
+  }
+  .site-header {
+    padding: 0.4rem 0.6rem;
+  }
 }
 
 @media (max-width: 1000px) and (orientation: landscape) {
