@@ -1,9 +1,13 @@
 ---
 layout: layouts/base.njk
-title: Home
+title: Best Day Ever
 ---
 
 <div class="home-main">
+
+  <section class="home-intro">
+    <p>A weekly family comic about chaos, sarcasm, snacks, and the grandkids running the show — new comics whenever the chaos produces one.</p>
+  </section>
 
   {% set latestComic = comics | last %}
   {% set previousComic = comics[comics.length - 2] %}

@@ -5,6 +5,8 @@ pagination:
   alias: comic
 permalink: "{{ comic.url }}"
 layout: layouts/base.njk
+eleventyComputed:
+  title: "{{ comic.title }}"
 ---
 
 {% set currentIndex = pagination.pageNumber %}
