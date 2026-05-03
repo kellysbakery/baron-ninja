@@ -9,15 +9,21 @@
 </head>
 <body>
   <header class="site-header">
-  <div class="site-title">
-    <a href="/">baron.ninja</a>
-    <span>Best Day Ever Comics</span>
-  </div>
+    <div class="site-title">
+      <div class="site-title-row">
+        <a href="/">baron.ninja</a>
+        <span>Best Day Ever Comics</span>
+      </div>
 
-  <nav class="site-nav">
-    <a href="/comics/">Archive</a>
-  </nav>
-</header>
+      <p class="site-tagline">
+        Family chaos, questionable decisions and a new comic every Sunday... maybe.
+      </p>
+    </div>
+
+    <nav class="site-nav">
+      <a href="/comics/">Archive</a>
+    </nav>
+  </header>
 
   <main>
     {{ content | safe }}
