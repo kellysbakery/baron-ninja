@@ -109,12 +109,26 @@ h2 {
   font-size: 0.95rem;
 }
 
+/* =========================================================
+   IMAGE HEIGHT CONTROL (DESKTOP FIX)
+   ---------------------------------------------------------
+   We reduce max-height so the FULL layout fits on screen:
+   header + title + image + buttons + footer
+
+   Without this, the footer gets pushed below viewport
+   and causes scrollbars on desktop.
+   ========================================================= */
+
 .comic-feature img,
 .comic-viewer img {
   display: block;
   width: auto;
   max-width: 100%;
-  max-height: calc(100vh - 220px);
+
+  /* OLD: 220px → TOO TIGHT AFTER ADDING BUTTONS */
+  /* NEW: 280px → Leaves space for nav + footer */
+  max-height: calc(100vh - 280px);
+
   height: auto;
   border-radius: 12px;
   object-fit: contain;
