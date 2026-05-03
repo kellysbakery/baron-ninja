@@ -7,9 +7,13 @@
   <link rel="stylesheet" href="/css/site.css">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-  {# Preload older comic image for faster navigation #}
+  {# Speed up the most likely next navigation: Older Comic #}
   {% if olderComicImage %}
     <link rel="preload" as="image" href="{{ olderComicImage }}" fetchpriority="low">
+  {% endif %}
+
+  {% if olderComicUrl %}
+    <link rel="prefetch" href="{{ olderComicUrl }}">
   {% endif %}
 
 </head>
@@ -34,6 +38,7 @@
   <main>
     {{ content | safe }}
   </main>
+
   <footer class="site-footer">
     © 2026 Best Day Ever Comics by Grandpa Keith & Grandma Kelly. All rights reserved.
   </footer>
