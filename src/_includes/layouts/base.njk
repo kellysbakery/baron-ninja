@@ -6,6 +6,12 @@
   <title>{{ title }} | baron.ninja</title>
   <link rel="stylesheet" href="/css/site.css">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  {# Preload older comic image for faster navigation #}
+  {% if olderComicImage %}
+    <link rel="preload" as="image" href="{{ olderComicImage }}" fetchpriority="low">
+  {% endif %}
+
 </head>
 <body>
   <header class="site-header">
@@ -29,6 +35,7 @@
     {{ content | safe }}
   </main>
   <footer class="site-footer">
- © 2026 Best Day Ever Comics by Grandpa Keith & Grandma Kelly. All rights reserved.
+    © 2026 Best Day Ever Comics by Grandpa Keith & Grandma Kelly. All rights reserved.
+  </footer>
 </body>
 </html>
