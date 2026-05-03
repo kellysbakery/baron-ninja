@@ -1,0 +1,24 @@
+{
+  "id": "2026-04-05-grilled-cheese-dare",
+  "slug": "grilled-cheese-dare",
+  "title": "Grilled Cheese Dare",
+  "date": "2026-04-05",
+  "image": "/images/comics/2026/2026-04-05-grilled-cheese-dare.png",
+  "alt": "A young girl proudly asks for a grilled cheese with peanut butter and pickles while Pa and a boy react in horror.",
+  "characters": [
+    "grandma",
+    "pa",
+    "kid-2",
+    "kid-3"
+  ],
+  "tags": [
+    "grilled-cheese",
+    "peanut-butter",
+    "pickles",
+    "food",
+    "home"
+  ],
+  "setting": "kitchen",
+  "occasion": null,
+  "status": "published"
+}
