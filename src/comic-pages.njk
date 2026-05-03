@@ -8,6 +8,7 @@ layout: layouts/base.njk
 eleventyComputed:
   title: "{{ comic.title }}"
   olderComicImage: "{{ comics[pagination.pageNumber - 1].image }}"
+  olderComicUrl: "{{ comics[pagination.pageNumber - 1].url }}"
 ---
 
 {% set currentIndex = pagination.pageNumber %}
