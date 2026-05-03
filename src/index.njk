@@ -14,17 +14,17 @@ title: Best Day Ever
     </h2>
 
     <div class="comic-viewer">
-      <div class="comic-side-nav">
-        <span></span>
-      </div>
-
       <a href="{{ latestComic.url }}">
         <img src="{{ latestComic.image }}" alt="{{ latestComic.alt }}">
       </a>
 
-      <div class="comic-side-nav">
+      <div class="comic-nav-row">
+        <span class="nav-disabled">← Newer Comic</span>
+
         {% if previousComic %}
-          <a href="{{ previousComic.url }}">Older →</a>
+          <a href="{{ previousComic.url }}">Older Comic →</a>
+        {% else %}
+          <span class="nav-disabled">Older Comic →</span>
         {% endif %}
       </div>
     </div>

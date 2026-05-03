@@ -14,23 +14,25 @@ eleventyComputed:
 {% set nextComic = comics[currentIndex + 1] %}
 
 <article class="comic-feature comic-page">
-<h2 class="comic-title">
-  {{ comic.title }}
-  <span class="comic-date">{{ comic.date | formatDate }}</span>
-</h2>
+  <h2 class="comic-title">
+    {{ comic.title }}
+    <span class="comic-date">{{ comic.date | formatDate }}</span>
+  </h2>
 
   <div class="comic-viewer">
-    <div class="comic-side-nav">
-      {% if nextComic %}
-        <a href="{{ nextComic.url }}">← Newer</a>
-      {% endif %}
-    </div>
-
     <img src="{{ comic.image }}" alt="{{ comic.alt }}">
 
-    <div class="comic-side-nav">
+    <div class="comic-nav-row">
+      {% if nextComic %}
+        <a href="{{ nextComic.url }}">← Newer Comic</a>
+      {% else %}
+        <span class="nav-disabled">← Newer Comic</span>
+      {% endif %}
+
       {% if previousComic %}
-        <a href="{{ previousComic.url }}">Older →</a>
+        <a href="{{ previousComic.url }}">Older Comic →</a>
+      {% else %}
+        <span class="nav-disabled">Older Comic →</span>
       {% endif %}
     </div>
   </div>
