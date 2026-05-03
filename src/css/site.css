@@ -65,6 +65,22 @@ a {
   color: var(--muted);
 }
 
+/* Tagline under site title */
+.site-title-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+}
+
+.site-tagline {
+  margin: 0.1rem auto 0.25rem;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  color: var(--muted);
+  opacity: 0.7;
+  max-width: 600px;
+}
+
 .site-nav a {
   font-weight: 700;
   text-decoration: none;
