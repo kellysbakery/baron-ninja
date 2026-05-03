@@ -20,7 +20,12 @@ eleventyComputed:
   </h2>
 
   <div class="comic-viewer">
-    <img src="{{ comic.image }}" alt="{{ comic.alt }}">
+    <img
+      src="{{ comic.image }}"
+      alt="{{ comic.alt }}"
+      width="1536"
+      height="1152"
+    >
 
     <div class="comic-nav-row">
       {% if nextComic %}
