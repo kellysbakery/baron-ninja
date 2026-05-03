@@ -1,10 +1,13 @@
 ---
 layout: layouts/base.njk
 title: Best Day Ever
+eleventyComputed:
+  olderComicImage: "{{ comics[comics.length - 2].image }}"
+  olderComicUrl: "{{ comics[comics.length - 2].url }}"
 ---
 
 {% set latestComic = comics | last %}
-{% set previousComic = comics[comics.length - 2] %}
+{% set olderComic = comics[comics.length - 2] %}
 
 {% if latestComic %}
   <article class="comic-feature comic-page">
@@ -26,8 +29,8 @@ title: Best Day Ever
       <div class="comic-nav-row">
         <span class="nav-disabled">← Newer Comic</span>
 
-        {% if previousComic %}
-          <a href="{{ previousComic.url }}">Older Comic →</a>
+        {% if olderComic %}
+          <a href="{{ olderComic.url }}">Older Comic →</a>
         {% else %}
           <span class="nav-disabled">Older Comic →</span>
         {% endif %}
