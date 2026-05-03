@@ -7,10 +7,12 @@ permalink: "{{ comic.url }}"
 layout: layouts/base.njk
 eleventyComputed:
   title: "{{ comic.title }}"
+  olderComicImage: "{{ comics[pagination.pageNumber - 1].image }}"
+  olderComicUrl: "{{ comics[pagination.pageNumber - 1].url }}"
 ---
 
 {% set currentIndex = pagination.pageNumber %}
-{% set previousComic = comics[currentIndex - 1] %}
+{% set olderComic = comics[currentIndex - 1] %}
 {% set nextComic = comics[currentIndex + 1] %}
 
 <article class="comic-feature comic-page">
@@ -20,7 +22,12 @@ eleventyComputed:
   </h2>
 
   <div class="comic-viewer">
-    <img src="{{ comic.image }}" alt="{{ comic.alt }}">
+    <img
+      src="{{ comic.image }}"
+      alt="{{ comic.alt }}"
+      width="1536"
+      height="1152"
+    >
 
     <div class="comic-nav-row">
       {% if nextComic %}
@@ -29,8 +36,8 @@ eleventyComputed:
         <span class="nav-disabled">← Newer Comic</span>
       {% endif %}
 
-      {% if previousComic %}
-        <a href="{{ previousComic.url }}">Older Comic →</a>
+      {% if olderComic %}
+        <a href="{{ olderComic.url }}">Older Comic →</a>
       {% else %}
         <span class="nav-disabled">Older Comic →</span>
       {% endif %}

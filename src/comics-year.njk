@@ -72,7 +72,13 @@ eleventyComputed:
             <p class="comic-date">{{ comic.date | formatDate }}</p>
 
             <a href="{{ comic.url }}">
-              <img src="{{ comic.image }}" alt="{{ comic.alt }}">
+              <img
+                src="{{ comic.image | replace('/full/', '/thumb/') | replace('.png', '.webp') }}"
+                alt="{{ comic.alt }}"
+                width="384"
+                height="288"
+                loading="lazy"
+              >
             </a>
           </article>
         {% endfor %}
