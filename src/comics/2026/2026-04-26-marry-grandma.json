@@ -2,19 +2,12 @@
   "id": "2026-04-26-marry-grandma",
   "slug": "marry-grandma",
   "title": "Marry Grandma",
+  "description": "A family comic about a grandson's sweet plan to marry Grandma someday.",
   "date": "2026-04-26",
   "image": "/images/comics/full/2026-04-26-marry-grandma.png",
   "alt": "A boy explains that he is going to marry Grandma when he is older while Mom and Dad react.",
-  "characters": [
-    "kid-2",
-    "mom",
-    "dad",
-    "grandma"
-  ],
-  "tags": [
-    "marriage-joke",
-    "family"
-  ],
+  "characters": ["kid-2", "mom", "dad", "grandma"],
+  "tags": ["marriage-joke", "family"],
   "setting": "home",
   "occasion": null,
   "status": "published"

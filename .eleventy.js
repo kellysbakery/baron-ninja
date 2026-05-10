@@ -13,6 +13,10 @@ module.exports = function (eleventyConfig) {
     return `${month}-${day}-${year}`;
   });
 
+  eleventyConfig.addFilter("json", function (value) {
+    return JSON.stringify(value).replace(/</g, "\\u003c");
+  });
+
   return {
     dir: {
       input: "src",

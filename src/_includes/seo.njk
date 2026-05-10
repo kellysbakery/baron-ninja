@@ -1,0 +1,82 @@
+{% set pageTitle = comic.title if comic and comic.title else title %}
+{% set titleText = pageTitle + " | " + site.name %}
+{% set pageDescription = comic.description if comic and comic.description else description %}
+{% set descriptionText = pageDescription if pageDescription else site.description %}
+{% set canonicalUrl = site.url + page.url %}
+{% set latestComicForSeo = comics | last if comics else null %}
+{% set pageImage = comic.image if comic and comic.image else image %}
+{% set pageImageAlt = comic.alt if comic and comic.alt else imageAlt %}
+{% if not pageImage and page.url == "/" and latestComicForSeo %}
+  {% set pageImage = latestComicForSeo.image %}
+{% endif %}
+{% if not pageImageAlt and page.url == "/" and latestComicForSeo %}
+  {% set pageImageAlt = latestComicForSeo.alt %}
+{% endif %}
+{% set absoluteImageUrl = site.url + pageImage if pageImage else "" %}
+{% set ogType = "article" if comic else "website" %}
+
+<title>{{ titleText | escape }}</title>
+<meta name="description" content="{{ descriptionText | escape }}">
+<link rel="canonical" href="{{ canonicalUrl }}">
+
+<meta property="og:site_name" content="{{ site.name | escape }}">
+<meta property="og:locale" content="{{ site.locale }}">
+<meta property="og:type" content="{{ ogType }}">
+<meta property="og:title" content="{{ titleText | escape }}">
+<meta property="og:description" content="{{ descriptionText | escape }}">
+<meta property="og:url" content="{{ canonicalUrl }}">
+{% if pageImage %}
+<meta property="og:image" content="{{ absoluteImageUrl }}">
+<meta property="og:image:width" content="{{ site.imageWidth }}">
+<meta property="og:image:height" content="{{ site.imageHeight }}">
+{% if pageImageAlt %}
+<meta property="og:image:alt" content="{{ pageImageAlt | escape }}">
+{% endif %}
+{% endif %}
+
+<meta name="twitter:card" content="{{ site.twitterCard }}">
+<meta name="twitter:title" content="{{ titleText | escape }}">
+<meta name="twitter:description" content="{{ descriptionText | escape }}">
+{% if pageImage %}
+<meta name="twitter:image" content="{{ absoluteImageUrl }}">
+{% if pageImageAlt %}
+<meta name="twitter:image:alt" content="{{ pageImageAlt | escape }}">
+{% endif %}
+{% endif %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ site.title | json | safe }},
+  "url": {{ site.url | json | safe }},
+  "description": {{ site.description | json | safe }},
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.publisher | json | safe }}
+  }
+}
+</script>
+
+{% if comic %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ComicStory",
+  "name": {{ pageTitle | json | safe }},
+  "description": {{ descriptionText | json | safe }},
+  "url": {{ canonicalUrl | json | safe }},
+  "datePublished": {{ comic.date | json | safe }},
+  "image": {{ absoluteImageUrl | json | safe }},
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": {{ site.title | json | safe }},
+    "url": {{ site.url | json | safe }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.publisher | json | safe }}
+  }
+}
+</script>
+{% endif %}

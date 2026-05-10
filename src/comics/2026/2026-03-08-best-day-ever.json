@@ -2,23 +2,12 @@
   "id": "2026-03-08-best-day-ever",
   "slug": "best-day-ever",
   "title": "Best Day Ever",
+  "description": "A cheerful family comic about a granddaughter's perfect day at the park, Dairy Queen, and home.",
   "date": "2026-03-08",
   "image": "/images/comics/full/2026-03-08-best-day-ever.png",
   "alt": "A young girl declares it the best day ever after going to the park, having Dairy Queen, and planning to play Roblox.",
-  "characters": [
-    "kid-3",
-    "grandma",
-    "pa",
-    "kid-2"
-  ],
-  "tags": [
-    "best-day-ever",
-    "park",
-    "dairy-queen",
-    "roblox",
-    "home",
-    "family"
-  ],
+  "characters": ["kid-3", "grandma", "pa", "kid-2"],
+  "tags": ["best-day-ever", "park", "dairy-queen", "roblox", "home", "family"],
   "setting": "home",
   "occasion": "sleepover",
   "status": "published"
