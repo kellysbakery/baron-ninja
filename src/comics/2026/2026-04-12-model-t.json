@@ -5,16 +5,8 @@
   "date": "2026-04-12",
   "image": "/images/comics/full/2026-04-12-model-t.png",
   "alt": "Pa tells Grandma that a Model T just drove by, then delivers the punchline: Ford.",
-  "characters": [
-    "pa",
-    "grandma"
-  ],
-  "tags": [
-    "dad-joke",
-    "model-t",
-    "ford",
-    "home"
-  ],
+  "characters": ["pa", "grandma"],
+  "tags": ["dad-joke", "model-t", "ford", "home"],
   "setting": "home",
   "occasion": null,
   "status": "published"
