@@ -5,18 +5,8 @@
   "date": "2026-03-22",
   "image": "/images/comics/full/2026-03-22-duct-tape-defense.png",
   "alt": "A boy explains to Mom, Dad, the principal, and a teacher that his sister only put tape on his mouth one time.",
-  "characters": [
-    "kid-2",
-    "mom",
-    "dad"
-  ],
-  "tags": [
-    "school",
-    "principal",
-    "teacher",
-    "duct-tape",
-    "trouble"
-  ],
+  "characters": ["kid-2", "mom", "dad"],
+  "tags": ["school", "principal", "teacher", "duct-tape", "trouble"],
   "setting": "school",
   "occasion": null,
   "status": "published"
