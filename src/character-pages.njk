@@ -14,14 +14,15 @@ eleventyComputed:
 ---
 
 <section class="character-page">
-  {% set hasCharacterImage = character.image and (character.image | assetExists) %}
+  {% set characterImage = character.thumb if character.thumb and (character.thumb | assetExists) else character.image %}
+  {% set hasCharacterImage = characterImage and (characterImage | assetExists) %}
   <div class="character-profile{% if hasCharacterImage %} character-profile-with-image{% endif %}">
     {% if hasCharacterImage %}
       <img
-        src="{{ character.image }}"
+        src="{{ characterImage }}"
         alt="{{ character.imageAlt }}"
-        width="384"
-        height="288"
+        width="320"
+        height="320"
         loading="lazy"
       >
     {% endif %}

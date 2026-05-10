@@ -5,6 +5,7 @@
     "slug": "pa",
     "description": "Coffee-loving grandpa, quiet observer, and occasional chaos enabler.",
     "image": "/images/characters/pa.png",
+    "thumb": "/images/characters/thumb/pa.webp",
     "imageAlt": "Pa from Best Day Ever Comics"
   },
   {
@@ -13,6 +14,7 @@
     "slug": "grandma-kelly",
     "description": "Loving grandma, excellent cook, and the family's warm center of gravity.",
     "image": "/images/characters/grandma-kelly.png",
+    "thumb": "/images/characters/thumb/grandma-kelly.webp",
     "imageAlt": "Grandma Kelly from Best Day Ever Comics"
   },
   {
@@ -21,6 +23,7 @@
     "slug": "dad",
     "description": "Handy, hardworking, and proud of oddly specific victories.",
     "image": "/images/characters/dad.png",
+    "thumb": "/images/characters/thumb/dad.webp",
     "imageAlt": "Dad from Best Day Ever Comics"
   },
   {
@@ -29,6 +32,7 @@
     "slug": "mom",
     "description": "Practical, patient, and usually the first to notice when family chaos is getting out of hand.",
     "image": "/images/characters/mom.png",
+    "thumb": "/images/characters/thumb/mom.webp",
     "imageAlt": "Mom from Best Day Ever Comics"
   },
   {
@@ -36,6 +40,7 @@
     "slug": "grandchildren",
     "description": "The source of most of the family chaos, questionable ideas, and best-day-ever moments.",
     "image": "/images/characters/grandchildren.png",
+    "thumb": "/images/characters/thumb/grandchildren.webp",
     "imageAlt": "The grandchildren from Best Day Ever Comics",
     "matchAny": ["kid-1", "kid-2", "kid-3"]
   }
