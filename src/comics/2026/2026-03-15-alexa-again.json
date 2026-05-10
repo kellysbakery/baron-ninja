@@ -5,18 +5,8 @@
   "date": "2026-03-15",
   "image": "/images/comics/full/2026-03-15-alexa-again.png",
   "alt": "A young girl keeps playing Head, Shoulders, Knees and Toes on Alexa while everyone else loses patience.",
-  "characters": [
-    "kid-3",
-    "kid-2",
-    "kid-1",
-    "grandma",
-    "pa"
-  ],
-  "tags": [
-    "alexa",
-    "music",
-    "family"
-  ],
+  "characters": ["kid-3", "kid-2", "kid-1", "grandma", "pa"],
+  "tags": ["alexa", "music", "family"],
   "setting": "home",
   "occasion": null,
   "status": "published"

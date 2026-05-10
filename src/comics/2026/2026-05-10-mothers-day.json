@@ -1,19 +1,11 @@
 {
   "id": "2026-05-10-mothers-day",
   "slug": "mothers-day",
-  "title": "Cooking Since Sunrise",
+  "title": "Mother's Day at Grandma's",
   "date": "2026-05-10",
   "image": "/images/comics/full/2026-05-10-mothers-day.png",
-  "alt": "At Grandma Kelly's house on Mother's Day, Grandma proudly carries a glazed ham, mashed potatoes, and carrots while announcing she has been cooking since sunrise. Pa sips coffee and jokes, Lexi is amazed by the enormous feast, and the family arrives to a table filled with homemade food, pies, flowers, and Mother's Day cards.",
-  "characters": [
-    "grandma",
-    "pa",
-    "dad",
-    "mom",
-    "kid-1",
-    "kid-2",
-    "kid-3"
-  ],
+  "alt": "At Grandma Kelly's house on Mother's Day, Grandma proudly carries a glazed ham, mashed potatoes, and carrots while announcing she has been cooking since sunrise. Pa sips coffee and jokes, Mom is amazed by the enormous feast, and the family arrives to a table filled with homemade food, pies, flowers, and Mother's Day cards.",
+  "characters": ["grandma", "pa", "dad", "mom", "kid-1", "kid-2", "kid-3"],
   "tags": [
     "mothers-day",
     "family-dinner",
