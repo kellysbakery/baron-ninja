@@ -16,6 +16,14 @@
     "imageAlt": "Grandma Kelly from Best Day Ever Comics"
   },
   {
+    "key": "dad",
+    "name": "Dad",
+    "slug": "dad",
+    "description": "Handy, hardworking, and proud of oddly specific victories.",
+    "image": "/images/characters/dad.png",
+    "imageAlt": "Dad from Best Day Ever Comics"
+  },
+  {
     "key": "mom",
     "name": "Mom",
     "slug": "mom",
@@ -24,11 +32,11 @@
     "imageAlt": "Mom from Best Day Ever Comics"
   },
   {
-    "key": "dad",
-    "name": "Dad",
-    "slug": "dad",
-    "description": "Handy, hardworking, and proud of oddly specific victories.",
-    "image": "/images/characters/dad.png",
-    "imageAlt": "Dad from Best Day Ever Comics"
+    "name": "The Grandchildren",
+    "slug": "grandchildren",
+    "description": "The source of most of the family chaos, questionable ideas, and best-day-ever moments.",
+    "image": "/images/characters/grandchildren.png",
+    "imageAlt": "The grandchildren from Best Day Ever Comics",
+    "matchAny": ["kid-1", "kid-2", "kid-3"]
   }
 ]

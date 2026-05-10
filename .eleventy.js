@@ -32,6 +32,14 @@ module.exports = function (eleventyConfig) {
     return fullPath.startsWith(inputDir) && fs.existsSync(fullPath);
   });
 
+  eleventyConfig.addFilter("includesAny", function (values, candidates) {
+    if (!Array.isArray(values) || !Array.isArray(candidates)) {
+      return false;
+    }
+
+    return candidates.some((candidate) => values.includes(candidate));
+  });
+
   return {
     dir: {
       input: "src",

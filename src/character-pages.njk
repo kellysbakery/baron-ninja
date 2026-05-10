@@ -36,7 +36,8 @@ eleventyComputed:
 
   <div class="archive-grid character-comics-grid">
     {% for comic in comics | reverse %}
-      {% if character.key in comic.characters %}
+      {% set characterAppears = (character.key and character.key in comic.characters) or (comic.characters | includesAny(character.matchAny)) %}
+      {% if characterAppears %}
         <article class="comic-card">
           <h3>
             <a href="{{ comic.url }}">
