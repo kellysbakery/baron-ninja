@@ -1,0 +1,38 @@
+---
+layout: layouts/base.njk
+title: Characters
+description: Meet the privacy-safe cast of Best Day Ever family comics.
+permalink: /characters/
+---
+
+<section class="character-page">
+  <h2 class="archive-title">Characters</h2>
+  <p class="archive-subtitle">Meet the family members who show up in the comics.</p>
+
+  <div class="character-grid">
+    {% for character in characters %}
+      {% set hasCharacterImage = character.image and (character.image | assetExists) %}
+      <article class="comic-card character-card">
+        {% if hasCharacterImage %}
+          <a href="/characters/{{ character.slug }}/" class="character-card-image">
+            <img
+              src="{{ character.image }}"
+              alt="{{ character.imageAlt }}"
+              width="384"
+              height="288"
+              loading="lazy"
+            >
+          </a>
+        {% endif %}
+
+        <h3>
+          <a href="/characters/{{ character.slug }}/">
+            {{ character.name }}
+          </a>
+        </h3>
+
+        <p>{{ character.description }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
