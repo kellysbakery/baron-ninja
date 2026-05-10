@@ -1,6 +1,16 @@
-{% set pageTitle = comic.title if comic and comic.title else title %}
+{% set pageTitle = title %}
+{% if comic and comic.title %}
+  {% set pageTitle = comic.title %}
+{% elif character and character.name %}
+  {% set pageTitle = character.name %}
+{% endif %}
 {% set titleText = pageTitle + " | " + site.name %}
-{% set pageDescription = comic.description if comic and comic.description else description %}
+{% set pageDescription = description %}
+{% if comic and comic.description %}
+  {% set pageDescription = comic.description %}
+{% elif character and character.description %}
+  {% set pageDescription = character.description %}
+{% endif %}
 {% set descriptionText = pageDescription if pageDescription else site.description %}
 {% set canonicalUrl = site.url + page.url %}
 {% set latestComicForSeo = comics | last if comics else null %}

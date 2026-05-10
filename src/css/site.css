@@ -87,6 +87,12 @@ a {
   white-space: nowrap;
 }
 
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 /* =========================================================
    MAIN LAYOUT
    ========================================================= */
@@ -436,6 +442,105 @@ footer {
 }
 
 /* =========================================================
+   CHARACTER PAGES
+   ========================================================= */
+
+.character-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1rem 1rem;
+}
+
+.character-grid,
+.character-comics-grid {
+  justify-content: center;
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
+  gap: 1rem;
+}
+
+.character-card {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.character-card h3,
+.character-card p {
+  margin: 0;
+}
+
+.character-card p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.character-card-image {
+  display: block;
+}
+
+.character-card-image img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #f5e4c8;
+}
+
+.character-profile img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #f5e4c8;
+}
+
+.character-profile {
+  max-width: 760px;
+  margin: 0 auto 1.5rem;
+  padding: 0.75rem;
+  background: var(--panel);
+  border: 2px solid var(--panel-border);
+  border-radius: 18px;
+  box-shadow: 0 6px 18px var(--shadow);
+  text-align: center;
+}
+
+.character-profile-with-image {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+}
+
+.character-profile-with-image .archive-title,
+.character-profile-with-image .archive-subtitle {
+  text-align: left;
+}
+
+.character-profile .archive-title {
+  margin-bottom: 0.4rem;
+}
+
+.character-profile .archive-subtitle {
+  margin: 0;
+}
+
+.character-comics-title {
+  margin: 0 0 0.85rem;
+  text-align: center;
+  color: var(--accent);
+}
+
+/* =========================================================
    ARCHIVE YEAR LIST PAGE
    Used on /comics/
    ========================================================= */
@@ -686,6 +791,17 @@ footer {
   .home-comic a {
     display: block;
     width: 100%;
+  }
+
+  .character-profile-with-image {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    text-align: center;
+  }
+
+  .character-profile-with-image .archive-title,
+  .character-profile-with-image .archive-subtitle {
+    text-align: center;
   }
 }
 
