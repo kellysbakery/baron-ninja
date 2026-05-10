@@ -2,19 +2,12 @@
   "id": "2026-05-03-library-legos",
   "slug": "library-legos",
   "title": "Advanced Structural Engineering",
+  "description": "A library comic about Pa drinking coffee while the kids build a daring Lego tower.",
   "date": "2026-05-03",
   "image": "/images/comics/full/2026-05-03-library-legos.png",
   "alt": "In a children's library, Pa drinks coffee while kids build a dangerously tall, wobbling Lego tower under a 'STEM Learning Center' sign, ignoring a 'Please keep noise to a minimum' sign.",
-  "characters": [
-    "pa",
-    "kid-2",
-    "kid-3"
-  ],
-  "tags": [
-    "library",
-    "legos",
-    "stem-learning"
-  ],
+  "characters": ["pa", "kid-2", "kid-3"],
+  "tags": ["library", "legos", "stem-learning"],
   "setting": "library",
   "occasion": null,
   "status": "published"
