@@ -32,10 +32,15 @@ body {
     sans-serif;
   background: var(--bg);
   color: var(--text);
+  overflow-x: hidden;
 }
 
 a {
   color: var(--accent);
+}
+
+img {
+  max-width: 100%;
 }
 
 /* =========================================================
@@ -558,12 +563,101 @@ footer {
 }
 
 @media (max-width: 760px) {
+  .site-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.45rem;
+    padding: 0.55rem 0.65rem 0.65rem;
+    text-align: center;
+  }
+
+  .site-title-row {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.15rem 0.45rem;
+  }
+
+  .site-title a {
+    font-size: 1.55rem;
+    line-height: 1;
+  }
+
+  .site-title span {
+    font-size: 0.9rem;
+    line-height: 1.15;
+  }
+
+  .site-tagline {
+    max-width: none;
+    margin: 0.2rem auto 0;
+    padding: 0;
+    line-height: 1.25;
+  }
+
+  .site-nav {
+    width: 100%;
+    justify-content: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .site-nav a {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid var(--panel-border);
+    border-radius: 999px;
+    background: rgba(255, 243, 223, 0.04);
+    line-height: 1.1;
+  }
+
+  main {
+    width: 100%;
+    margin: 0.45rem auto;
+  }
+
+  .archive-grid {
+    width: 100%;
+    padding: 0 0.5rem;
+    grid-template-columns: minmax(0, 1fr);
+    justify-content: stretch;
+    gap: 0.75rem;
+  }
+
+  .archive-grid .comic-card,
+  .character-card {
+    width: 100%;
+  }
+
+  .comic-card {
+    padding: 0.65rem;
+  }
+
+  .comic-card img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .character-page {
+    padding: 0 0.5rem 1rem;
+  }
+
   .character-grid {
     grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 
   .character-card {
     grid-column: auto;
+  }
+
+  .comic-feature {
+    width: 100%;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0;
+  }
+
+  .comic-viewer {
+    width: 100%;
   }
 }
 
