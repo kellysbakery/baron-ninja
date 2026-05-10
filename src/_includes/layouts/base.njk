@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% set pageTitle = comic.title if comic and comic.title else title %}
-  <title>{{ pageTitle | escape }} | baron.ninja</title>
+  {% include "seo.njk" %}
   <link rel="stylesheet" href="/css/site.css">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
