@@ -1,3 +1,6 @@
+const fs = require("fs");
+const path = require("path");
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/css");
@@ -15,6 +18,18 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("json", function (value) {
     return JSON.stringify(value).replace(/</g, "\\u003c");
+  });
+
+  eleventyConfig.addFilter("assetExists", function (assetPath) {
+    if (!assetPath || typeof assetPath !== "string") {
+      return false;
+    }
+
+    const normalizedPath = assetPath.replace(/^\/+/, "");
+    const fullPath = path.join(__dirname, "src", normalizedPath);
+    const inputDir = path.join(__dirname, "src");
+
+    return fullPath.startsWith(inputDir) && fs.existsSync(fullPath);
   });
 
   return {

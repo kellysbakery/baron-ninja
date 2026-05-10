@@ -1,0 +1,34 @@
+[
+  {
+    "key": "pa",
+    "name": "Pa",
+    "slug": "pa",
+    "description": "Coffee-loving grandpa, quiet observer, and occasional chaos enabler.",
+    "image": "/images/characters/pa.png",
+    "imageAlt": "Pa from Best Day Ever Comics"
+  },
+  {
+    "key": "grandma",
+    "name": "Grandma Kelly",
+    "slug": "grandma-kelly",
+    "description": "Loving grandma, excellent cook, and the family's warm center of gravity.",
+    "image": "/images/characters/grandma-kelly.png",
+    "imageAlt": "Grandma Kelly from Best Day Ever Comics"
+  },
+  {
+    "key": "mom",
+    "name": "Mom",
+    "slug": "mom",
+    "description": "Practical, patient, and usually the first to notice when family chaos is getting out of hand.",
+    "image": "/images/characters/mom.png",
+    "imageAlt": "Mom from Best Day Ever Comics"
+  },
+  {
+    "key": "dad",
+    "name": "Dad",
+    "slug": "dad",
+    "description": "Handy, hardworking, and proud of oddly specific victories.",
+    "image": "/images/characters/dad.png",
+    "imageAlt": "Dad from Best Day Ever Comics"
+  }
+]

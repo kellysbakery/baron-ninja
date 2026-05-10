@@ -1,0 +1,62 @@
+---
+layout: layouts/base.njk
+
+pagination:
+  data: characters
+  size: 1
+  alias: character
+
+permalink: "/characters/{{ character.slug }}/"
+
+eleventyComputed:
+  title: "{{ character.name }}"
+  description: "{{ character.description }}"
+---
+
+<section class="character-page">
+  {% set hasCharacterImage = character.image and (character.image | assetExists) %}
+  <div class="character-profile{% if hasCharacterImage %} character-profile-with-image{% endif %}">
+    {% if hasCharacterImage %}
+      <img
+        src="{{ character.image }}"
+        alt="{{ character.imageAlt }}"
+        width="384"
+        height="288"
+        loading="lazy"
+      >
+    {% endif %}
+
+    <div>
+      <h2 class="archive-title">{{ character.name }}</h2>
+      <p class="archive-subtitle">{{ character.description }}</p>
+    </div>
+  </div>
+
+  <h3 class="character-comics-title">Comics featuring {{ character.name }}</h3>
+
+  <div class="archive-grid character-comics-grid">
+    {% for comic in comics | reverse %}
+      {% if character.key in comic.characters %}
+        <article class="comic-card">
+          <h3>
+            <a href="{{ comic.url }}">
+              {{ comic.title }}
+            </a>
+          </h3>
+
+          <p class="comic-date">{{ comic.date | formatDate }}</p>
+
+          <a href="{{ comic.url }}">
+            <img
+              src="{{ comic.image | replace('/full/', '/thumb/') | replace('.png', '.webp') }}"
+              alt="{{ comic.alt }}"
+              width="384"
+              height="288"
+              loading="lazy"
+            >
+          </a>
+        </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
