@@ -1,0 +1,36 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>{{ site.url }}/</loc>
+    {% if comics and comics.length %}
+    <lastmod>{{ (comics | last).date }}</lastmod>
+    {% endif %}
+  </url>
+
+  <url>
+    <loc>{{ site.url }}/comics/</loc>
+    {% if comics and comics.length %}
+    <lastmod>{{ (comics | last).date }}</lastmod>
+    {% endif %}
+  </url>
+
+{% for yearGroup in comicsByYear %}
+  <url>
+    <loc>{{ site.url }}/comics/{{ yearGroup.year }}/</loc>
+    {% if yearGroup.comics and yearGroup.comics.length %}
+    <lastmod>{{ yearGroup.comics[0].date }}</lastmod>
+    {% endif %}
+  </url>
+{% endfor %}
+
+{% for comic in comics %}
+  <url>
+    <loc>{{ site.url }}{{ comic.url }}</loc>
+    <lastmod>{{ comic.date }}</lastmod>
+  </url>
+{% endfor %}
+</urlset>
