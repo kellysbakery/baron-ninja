@@ -15,7 +15,15 @@
   {% if olderComicUrl %}
     <link rel="prefetch" href="{{ olderComicUrl }}">
   {% endif %}
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQ2FMPJ30F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
+    gtag('config', 'G-BQ2FMPJ30F');
+  </script>
 </head>
 <body>
   <header class="site-header">
