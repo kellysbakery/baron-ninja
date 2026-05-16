@@ -15,6 +15,7 @@
   {% if olderComicUrl %}
     <link rel="prefetch" href="{{ olderComicUrl }}">
   {% endif %}
+  {% if eleventy.env.runMode == "build" %}
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BQ2FMPJ30F"></script>
   <script>
@@ -24,6 +25,7 @@
 
     gtag('config', 'G-BQ2FMPJ30F');
   </script>
+  {% endif %}
 </head>
 <body>
   <header class="site-header">
