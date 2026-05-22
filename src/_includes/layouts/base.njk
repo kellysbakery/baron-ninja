@@ -9,6 +9,17 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Best Day Ever">
   <meta name="apple-mobile-web-app-capable" content="yes">
+  {% if eleventy.env.runMode == "build" %}
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script>
+    window.OneSignalDeferred = window.OneSignalDeferred || [];
+    OneSignalDeferred.push(async function(OneSignal) {
+      await OneSignal.init({
+        appId: "28a34c31-1ec8-4fc8-9934-00a0c3060040",
+      });
+    });
+  </script>
+  {% endif %}
   <link rel="stylesheet" href="/css/site.css">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
