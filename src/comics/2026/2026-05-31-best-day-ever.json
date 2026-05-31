@@ -1,0 +1,14 @@
+{
+  "id": "2026-05-31-best-day-ever",
+  "slug": "field-mowed",
+  "title": "Best Day Ever",
+  "description": "Grandma Kelly and Pa realize it was the perfect family day: the entire field was mowed, dinner was cooked, and everyone got to spend time together.",
+  "date": "2026-05-31",
+  "image": "/images/comics/full/2026-05-31-best-day-ever.png",
+  "alt": "Grandma Kelly and Pa relax in lawn chairs at sunset while Dad grills burgers nearby, Mom rests in scrubs, and the grandkids play in a huge freshly mowed field. Grandma Kelly thinks, 'He mowed the entire field, made dinner, AND we spent time with family... Best Day Ever!'",
+  "characters": ["pa", "grandma", "dad", "mom", "kid-1", "kid-2", "kid-3"],
+  "tags": ["best-day-ever", "family", "cookout", "mowing", "grandkids", "summer"],
+  "setting": "backyard",
+  "occasion": "general",
+  "status": "published"
+}
