@@ -1,0 +1,25 @@
+{
+  "id": "2026-08-16-free-pizza",
+  "slug": "free-pizza",
+  "title": "Free Pizza",
+  "description": "Outside a church, Grandma proudly tells someone on the phone that her grandson has been going to Bible study every week. Pa notices the church sign advertising free pizza and has a pretty good idea why.",
+  "date": "2026-08-16",
+  "image": "/images/comics/full/2026-08-16-free-pizza.png",
+  "alt": "Outside a church, Grandma smiles proudly while talking on her phone and says, 'He’s been going to Bible study every week!' Pa stands beside her looking knowingly at a church sign that reads 'BIBLE STUDY' and 'FREE PIZZA.' Pa replies, 'Yeah. I think I know why.'",
+  "characters": ["pa", "grandma"],
+  "tags": [
+    "family",
+    "grandparents",
+    "church",
+    "bible-study",
+    "pizza",
+    "free-pizza",
+    "grandson",
+    "best-day-ever",
+    "grandma",
+    "pa"
+  ],
+  "setting": "church",
+  "occasion": "bible-study",
+  "status": "published"
+}
