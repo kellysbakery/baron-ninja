@@ -1,0 +1,23 @@
+{
+  "id": "2026-09-20-grandmas-house",
+  "slug": "grandmas-house",
+  "title": "Grandma’s House",
+  "description": "After his football game, kid-2 hopes to shower and nap in peace. He suggests that kid-3 visit Grandma, and she is thrilled by the idea.",
+  "date": "2026-09-20",
+  "image": "/images/comics/full/2026-09-20-grandmas-house.png",
+  "alt": "In a cozy living room, kid-2 stands in his football uniform with a gear bag and helmet while kid-3 hugs a stuffed bunny and wears a backpack. Kid-2 says, 'After my game, I’m taking a shower and a nap. Can you go to Grandma’s so it’s quiet?' Kid-3 excitedly replies, 'I get to go to Grandma’s? Yay!'",
+  "characters": ["kid-2", "kid-3"],
+  "tags": [
+    "family",
+    "siblings",
+    "grandma",
+    "grandchildren",
+    "football",
+    "nap",
+    "grandmas-house",
+    "best-day-ever"
+  ],
+  "setting": "home-living-room",
+  "occasion": "after-football-game",
+  "status": "published"
+}
