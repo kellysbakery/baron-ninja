@@ -1,0 +1,21 @@
+{
+  "id": "2026-10-11-brownie-time",
+  "slug": "brownie-time",
+  "title": "Brownie Time!",
+  "description": "In the kitchen, kid-3 asks Grandma if they can make brownies. Grandma enthusiastically agrees and reaches for the mixing bowl.",
+  "date": "2026-10-11",
+  "image": "/images/comics/full/2026-10-11-brownie-time.png",
+  "alt": "In a cozy kitchen, Grandma Kelly wears an apron labeled “Grandma Kelly” and reaches for a mixing bowl while smiling at kid-3, who is excitedly holding a wooden spoon beside her. Kid-3 asks, “Grandma, can we make brownies?” Grandma replies, “Absolutely!”",
+  "characters": ["grandma", "kid-3"],
+  "tags": [
+    "family",
+    "grandma",
+    "grandchildren",
+    "baking",
+    "brownies",
+    "best-day-ever"
+  ],
+  "setting": "home-kitchen",
+  "occasion": "baking-together",
+  "status": "published"
+}
