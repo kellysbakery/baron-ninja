@@ -1,0 +1,23 @@
+{
+  "id": "2026-10-18-ice-cream-at-home",
+  "slug": "ice-cream-at-home",
+  "title": "Ice Cream at Home",
+  "description": "At the park on a beautiful fall day, Grandma asks the kids if they want to go out for ice cream. Kid-3 reminds her that they have ice cream at home.",
+  "date": "2026-10-18",
+  "image": "/images/comics/full/2026-10-18-ice-cream-at-home.png",
+  "alt": "On a sunny fall afternoon at a playground with swings, a slide, and colorful autumn leaves, Grandma asks if the kids want to go out for ice cream. Kid-3, holding her stuffed bunny, replies, “But Grandma, we have ice cream at home!” Pa and kid-1 and kid-2 listen silently.",
+  "characters": ["pa", "grandma", "kid-1", "kid-2", "kid-3"],
+  "tags": [
+    "family",
+    "grandma",
+    "pa",
+    "grandchildren",
+    "ice-cream",
+    "park",
+    "fall",
+    "best-day-ever"
+  ],
+  "setting": "park-playground",
+  "occasion": "fall-day-at-the-park",
+  "status": "published"
+}
